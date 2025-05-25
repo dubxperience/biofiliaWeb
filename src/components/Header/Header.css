@@ -37,7 +37,7 @@
   border-radius: 0.5rem;
   box-shadow: 3px 5px 0 var(--color-black-700);
   font-weight: 600;
-  color: var(--color-black-700);
+  color: var(--color-beige-100);
   background: var(--color-green-400);
   transition: box-shadow 250ms, transform 250ms, filter 50ms;
 }
