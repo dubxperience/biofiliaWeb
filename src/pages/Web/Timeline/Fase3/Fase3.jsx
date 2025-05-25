@@ -38,7 +38,7 @@ export default function Fase3() {
           <div className="fases fase3">
             <div className="fase-title">
               <h3>
-                El cacao fue ritual, <br /> tributo y poder
+                El cacao fue ritual, <br /> tributo y poder.
               </h3>
             </div>
           </div>

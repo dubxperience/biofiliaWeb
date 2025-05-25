@@ -37,7 +37,7 @@ export default function Fase5() {
           <div className="fases fase5">
             <div className="fase-title">
               <h3>
-                Del taller artesanala <br /> a la fábrica
+                Del taller artesanala <br /> a la fábrica.
               </h3>
             </div>
           </div>

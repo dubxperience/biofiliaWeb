@@ -38,7 +38,7 @@ export default function Fase4() {
           <div className="fases fase4">
             <div className="fase-title">
               <h3>
-                El cacao cambió de <br /> continente y de sabor
+                El cacao cambió de <br /> continente y de sabor.
               </h3>
             </div>
           </div>
