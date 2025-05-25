@@ -1,68 +1,87 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Base */
+  font-family: "Montserrat", sans-serif;
+  --color-black-700: #020b06;
+  --color-mustard-400: #f0bd50;
+  --color-mustard-700: #d8771b;
+  --color-beige-100: #fff3db;
+  --color-beige-300: #f8d693;
+  --color-yellow-500: #fde509;
+  --color-pink-300: #ff99bb;
+  --color-pink-100: #fcd6e3;
+  --color-green-200: #00c64c;
+  --color-green-400: #018e6f;
+  --color-green-600: #236b39;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Funcionales */
+  --color-bg: var(--color-beige-100);
+  --color-bg-game-1: var(--color-green-400);
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+html {
+  scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: var(--color-bg);
 }
-
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 4rem;
+  font-weight: 800;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.7rem;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 3.5rem;
+}
+.banner-top {
+  width: 100%;
+  height: 96px;
+  background: var(--color-mustard-700);
+}
+@media (max-width: 920px) {
+  .banner-top {
+    display: none;
   }
 }

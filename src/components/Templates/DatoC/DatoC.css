@@ -1,0 +1,79 @@
+.datoc-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  background: var(--color-pink-100);
+}
+.datoc-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  z-index: 3;
+}
+.datoc-header h2 {
+  font-size: clamp(1.5rem, 10vw, 3rem);
+  font-weight: 800;
+  color: var(--color-black-700);
+}
+.datoc-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--color-black-700);
+}
+.datoc-container svg {
+  position: absolute;
+  transform: scale(0.6) rotate(70deg);
+}
+.datoc-container .polygon2 path {
+  opacity: 0.5;
+}
+.c-polygon1 {
+  bottom: 50%;
+  left: 10%;
+  transform-origin: center;
+}
+.c-polygon2 {
+  top: 6rem;
+  right: 20%;
+  transform-origin: center;
+}
+@media (min-width: 1024px) {
+  .datoc-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img header"
+      "img content";
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .datoc-header {
+    grid-area: header;
+    text-align: left;
+  }
+  .datoc-content {
+    grid-area: content;
+    text-align: left;
+  }
+  .datoc-img {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .c-polygon1 {
+    left: -20%;
+    transform: scale(0.7) rotate(20deg);
+  }
+  .c-polygon2 {
+    top: 5rem;
+    left: 10%;
+  }
+}

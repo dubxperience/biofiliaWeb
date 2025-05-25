@@ -1,0 +1,29 @@
+.feature-nosotros {
+  flex-direction: column;
+}
+.feature-nosotros .text-up {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.feature-nosotros .text-up h3,
+.feature-nosotros .text-up p {
+  transform: translateY(100px);
+  text-align: left;
+}
+.feature-nosotros .img {
+  display: flex;
+  height: 40%;
+}
+.feature-nosotros .text-down {
+  display: flex;
+  width: 100%;
+}
+.feature-nosotros .text-down p {
+  width: 100%;
+  text-align: right;
+}
+.feature-nosotros .text-down p a {
+  color: var(--color-mustard-700);
+}

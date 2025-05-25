@@ -1,0 +1,78 @@
+.dato-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+}
+.dato-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  z-index: 3;
+}
+.dato-header h2 {
+  font-size: clamp(1.5rem, 10vw, 3rem);
+  font-weight: 800;
+}
+.dato-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+.dato-container svg {
+  position: absolute;
+  transform: scale(0.4) rotate(20deg);
+}
+.dato-container .polygon2 path {
+  opacity: 0.5;
+}
+.polygon1 {
+  top: -3rem;
+  left: 20%;
+  transform-origin: center;
+}
+.polygon2 {
+  top: 6rem;
+  right: 20%;
+  transform-origin: center;
+}
+@media (min-width: 1024px) {
+  .dato-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header img"
+      "content img";
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .dato-header {
+    grid-area: header;
+    text-align: left;
+  }
+  .dato-content {
+    grid-area: content;
+    text-align: left;
+  }
+  .dato-img {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .polygon1 {
+    top: -5rem;
+    left: 10%;
+    transform: scale(0.7) rotate(20deg);
+  }
+  .polygon2 {
+    top: 5rem;
+    right: 10%;
+    transform: scale(0.7) rotate(20deg);
+  }
+}

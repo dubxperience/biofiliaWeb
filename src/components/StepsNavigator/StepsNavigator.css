@@ -1,0 +1,67 @@
+.step-navigator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2.5rem clamp(1.2rem, 1.5rem, 2.5rem);
+  border-top: 2px solid var(--color-black-700);
+  background: var(--color-mustard-400);
+}
+.current-fase-title {
+  padding: 0 0.5rem;
+}
+.current-fase-title h5 {
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+}
+.fase-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(3rem, 3.2rem, 3.5rem);
+  height: clamp(3rem, 3.2rem, 3.5rem);
+  padding: 0.5rem;
+  border: 2px solid var(--color-black-700);
+  border-radius: 50%;
+  box-shadow: -4px 5px 0 var(--color-black-700);
+  font-size: 2rem;
+  color: var(--color-black-700);
+  background: var(--color-mustard-700);
+  cursor: pointer;
+  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+}
+.fase-arrow:hover {
+  transform: translate(1px, 1px);
+  box-shadow: -2px 2.5px 0 var(--color-black-700);
+}
+.fase-arrow:active {
+  filter: saturate(0.75);
+}
+.fase-arrow.last {
+  background: var(--color-yellow-500);
+}
+.arrow-placeholder {
+  width: 2rem;
+}
+.fase-dots {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+.fase-dot {
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-beige-100);
+  border-radius: 999px;
+  border: 1px solid var(--color-black-700);
+  box-shadow: -3px 3px 0 var(--color-black-700);
+  transition: all 0.3s ease;
+}
+.fase-dot.active {
+  width: 3rem;
+  background: var(--color-mustard-700);
+}

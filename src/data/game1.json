@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "text": "¿Qué caracteriza una planta domesticada?",
+    "options": [
+      {
+        "text": "Ha sido modificada para los humanos",
+        "isCorrect": true,
+        "feedback": "¡Correcto! La domesticación cambia las características naturales para hacerlas más útiles."
+      },
+      {
+        "text": "Se cultiva tal cómo existe en la naturaleza",
+        "isCorrect": false,
+        "feedback": "¡Qué mal! Eso sería recolección o cultivo de especies silvestres"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "¿Cuál de estas afirmaciones describe mejor el cacao?",
+    "options": [
+      {
+        "text": "Solo se cultiva para hacer chocolate",
+        "isCorrect": false,
+        "feedback": "¡Lo siento! El chocolate es solo una parte de todo lo que se obtiene del cacao."
+      },
+      {
+        "text": "Es un alimento y también se usa en cosmética y medicina",
+        "isCorrect": true,
+        "feedback": "¡Así es! El cacao es multifuncional, no solo delicioso."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "¿Dónde comenzó la historia del cacao?",
+    "options": [
+      {
+        "text": "En centroamérica, en tierras aztecas",
+        "isCorrect": false,
+        "feedback": "¡Ups! Allí se domesticó más tarde, pero no fue su origen."
+      },
+      {
+        "text": "En la Alta Amazonía, entre Colombia, Ecuador y Brasil",
+        "isCorrect": true,
+        "feedback": "¡Exacto! Allí nació el cacao hace más de 5.000 años."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "¿Qué ayudó a expandir las semillas de cacao por América?",
+    "options": [
+      {
+        "text": "Animales, aves y pueblos nómadas",
+        "isCorrect": true,
+        "feedback": "¡Así es! Fueron claves en la dispersión natural y cultural"
+      },
+      {
+        "text": "Ruta scomerciales marítimas precolombinas",
+        "isCorrect": false,
+        "feedback": "¡Oh que mal! No hay evidencia de rutas marítimas complejas en esa etapa para este caso."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "¿Cómo usaban el cacao los Aztecas?",
+    "options": [
+      {
+        "text": "Cómo comida para los nobles",
+        "isCorrect": false,
+        "feedback": "¡No del todo! También lo era, pero reducirlo solo a eso deja fuera su función como moneda"
+      },
+      {
+        "text": "Cómo moneda y bebida ritual",
+        "isCorrect": true,
+        "feedback": "¡Diste justo en el clavo! Era símbolo de estatus y tenía valor económico y ceremonial."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "¿Cómo era el cacao que bebía Moctezuma II?",
+    "options": [
+      {
+        "text": "Espeso, amargo y servido en copas de oro",
+        "isCorrect": true,
+        "feedback": "¡Correcto! Así se preparaba el xocolatl, muy diferente al chocolate moderno."
+      },
+      {
+        "text": "Dulce, caliente y hecho con leche",
+        "isCorrect": false,
+        "feedback": "¡Esta vez no acertaste! Eso lo inventaron los europeos tiempo después."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "¿Qué significa el nombre científico del cacao: Theobroma Cacao?",
+    "options": [
+      {
+        "text": "Significa: 'Alimento de los dioses'",
+        "isCorrect": true,
+        "feedback": "¡Lo tienes! Viene del griego theo (dios) + broma (comida)."
+      },
+      {
+        "text": "es el nombre de una deidad amazónica",
+        "isCorrect": false,
+        "feedback": "¡Uy, casi! Aunque el cacao era sagrado, su nombre no viene de un dios indígena."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "¿Cuál civilización consideraba al cacao un regalo de Quetzalcóatl?",
+    "options": [
+      {
+        "text": "Los Incas",
+        "isCorrect": false,
+        "feedback": "Cerca, pero no. Usaban otras plantas sagradas, pero el cacao no fue central en su cultura."
+      },
+      {
+        "text": "Los Mayas",
+        "isCorrect": true,
+        "feedback": "¡Le diste al grano! Para ellos el cacao tenía un origen divino y espiritual."
+      }
+    ]
+  }
+]

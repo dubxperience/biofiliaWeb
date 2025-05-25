@@ -1,0 +1,106 @@
+.feature-experiencias {
+  position: relative;
+  padding-bottom: 3.5rem;
+  overflow-x: hidden;
+}
+.feature-experiencias .polygon1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  filter: opacity(30%);
+}
+.feature-experiencias .polygon2 {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  z-index: -1;
+  filter: opacity(30%);
+  transform: scale(0.6);
+}
+.tv-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-black-700);
+}
+.tv-container h4 {
+  font-weight: bold;
+}
+.tv-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+.tv-inner-container h4 {
+  text-align: center;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+.card-container .card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 320px;
+  padding: 2rem;
+  background-position: center;
+  background-size: cover;
+}
+.card-container .card a {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-black-700);
+  border-radius: 0.5rem;
+  box-shadow: 3px 5px 0px var(--color-black-700);
+  font-weight: 600;
+  color: var(--color-black-700);
+  background: var(--color-beige-300);
+  z-index: 100;
+  cursor: pointer;
+  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+}
+.card-container .card a:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 2.5px 0 var(--color-black-700);
+}
+.card-container .card a:active {
+  filter: saturate(0.75);
+}
+/*.tv-container div {
+  position: absolute;
+}
+.tv-container div:nth-child(1) {
+  top: 0;
+  width: 100%;
+  height: 48px;
+  background: var(--color-beige-300);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  filter: opacity(50%);
+}
+.tv-container div:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100%;
+  background: var(--color-beige-300);
+  clip-path: polygon(0 0, 100% 6%, 100% 95%, 0 100%);
+  filter: opacity(50%);
+}
+.tv-container div:nth-child(1) {
+  top: 0;
+  width: 100%;
+  height: 48px;
+  background: var(--color-beige-300);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  filter: opacity(50%);
+}*/
