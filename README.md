@@ -1,69 +1,109 @@
-# 🌿 Biofilia Web
+<h1 align="center">
+  <img alt="Biofilia Web" title="Biofilia Web" src="./public/banner.jpg" />
+</h1>
 
-**Biofilia Web** es una aplicación web interactiva desarrollada con React y Vite. Su propósito es promover la conexión entre los seres humanos y la naturaleza mediante una experiencia digital accesible y visualmente atractiva.
+<h1 align="center">
+  🌿 Biofilia Web
+</h1>
 
-## 🚀 Tecnologías utilizadas
+<h3 align="center">Una experiencia interactiva que conecta al usuario con la naturaleza a través de la web</h3>
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Firebase Hosting](https://firebase.google.com/)
-- [ESLint](https://eslint.org/) para reglas de linting
+<p align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  <img alt="Status" src="https://img.shields.io/badge/status-en%20desarrollo-yellow">
+  <a href="https://github.com/dubxperience/">
+    <img alt="made by dubxperience" src="https://img.shields.io/badge/made%20by-dubxperience-blue">
+  </a>
+</p>
 
-## 📁 Estructura del proyecto
+<h4 align="center"> 
+	 🚧 Proyecto en desarrollo 🚧
+</h4>
 
+<p align="center">
+ <a href="#sobre-el-proyecto">Sobre el proyecto</a> •
+ <a href="#características">Características</a> •
+ <a href="#cómo-usarlo">Cómo usarlo</a> • 
+ <a href="#stack-tecnológico">Stack tecnológico</a> •  
+ <a href="#autores">Autores</a> • 
+ <a href="#licencia">Licencia</a>
+</p>
+
+---
+
+## 🧠 Sobre el proyecto
+
+**Biofilia Web** es una aplicación creada en React con Vite, pensada para ofrecer una experiencia visual y educativa centrada en la biofilia —la afinidad natural entre los humanos y el entorno natural—. Utiliza herramientas modernas de desarrollo y despliegue para garantizar un producto ligero, rápido y modular.
+
+---
+
+## ✨ Características
+
+- Interfaz web responsiva construida en React.
+- Preparada para despliegue en Firebase Hosting.
+- Arquitectura modular basada en componentes.
+- Ideal para experiencias educativas o museográficas digitales.
+
+---
+
+## 🧪 Cómo usarlo
+
+### 📦 Pre-requisitos
+
+- [Node.js](https://nodejs.org/en/)
+- [Git](https://git-scm.com/)
+- Editor recomendado: [Visual Studio Code](https://code.visualstudio.com/)
+
+### 🛠️ Instalación y ejecución
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/dubxperience/biofiliaWeb.git
+cd biofiliaWeb
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+
+# Acceder en navegador
+http://localhost:5173
 ```
-biofiliaWeb/
-├── .firebase/             # Configuración de Firebase
-├── public/                # Archivos estáticos
-├── src/                   # Código fuente (componentes, vistas, estilos)
-├── firebase.json          # Configuración de hosting
-├── vite.config.js         # Configuración de Vite
-├── package.json           # Dependencias y scripts
-└── README.md              # Documentación del proyecto
-```
 
-## 🛠️ Instalación y ejecución local
-
-1. Clona este repositorio:
-
-   ```bash
-   git clone https://github.com/dubxperience/biofiliaWeb.git
-   cd biofiliaWeb
-   ```
-
-2. Instala las dependencias:
-
-   ```bash
-   npm install
-   ```
-
-3. Inicia el servidor de desarrollo:
-
-   ```bash
-   npm run dev
-   ```
-
-4. Abre `http://localhost:5173` en tu navegador para ver la aplicación.
-
-## 🔥 Despliegue en Firebase
-
-Este proyecto está configurado para Firebase Hosting.
+### 🚀 Despliegue en Firebase
 
 ```bash
 firebase login
 firebase deploy
 ```
 
-## 🧪 Sobre el template base (React + Vite)
+---
 
-Este proyecto fue generado inicialmente usando el template oficial de React + Vite.
+## 🧰 Stack tecnológico
 
-El entorno viene con soporte para HMR (Hot Module Replacement) y ESLint básico. Si se desea ampliar la configuración con TypeScript o reglas avanzadas, se puede consultar el [template oficial con TypeScript](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts).
+- **Framework principal:** [React](https://reactjs.org/)
+- **Empaquetador:** [Vite](https://vitejs.dev/)
+- **Despliegue:** [Firebase Hosting](https://firebase.google.com/)
+- **Linting:** [ESLint](https://eslint.org/)
 
-## 👥 Autor
+---
 
-- **dubxperience** - [GitHub](https://github.com/dubxperience)
+## 👥 Autores
 
-## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT.
+
+[isabelmelgui](https://github.com/isabelmelgui) 
+[SofiChamorro](https://github.com/SofiChamorro) 
+[XMarulandaH](https://github.com/XMarulandaH) 
+[snoop4488](https://github.com/snoop4488) 
+[JuanG917](https://github.com/JuanG917) 
+
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia [MIT](./LICENSE).
+
+---
