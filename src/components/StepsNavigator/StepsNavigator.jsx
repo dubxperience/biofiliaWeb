@@ -1,4 +1,7 @@
 import "./StepsNavigator.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function StepNavigator({
   currentStep,
@@ -14,7 +17,7 @@ export default function StepNavigator({
     <div className="step-navigator">
       {currentStep > 0 ? (
         <button className="fase-arrow left" onClick={onPrev}>
-          ←
+          <FontAwesomeIcon icon={faArrowLeft} />
         </button>
       ) : (
         <span className="arrow-placeholder" />
@@ -35,11 +38,11 @@ export default function StepNavigator({
 
       {isLastStep ? (
         <button className="fase-arrow last" onClick={onLastNext}>
-          →
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
       ) : (
         <button className="fase-arrow right" onClick={onNext}>
-          →
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
       )}
     </div>

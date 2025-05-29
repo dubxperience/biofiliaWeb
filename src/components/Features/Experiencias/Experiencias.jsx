@@ -1,30 +1,35 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import "./Experiencias.css";
 
 export default function Experiencias() {
+  const [activeModal, setActiveModal] = useState(null);
+
   const cards = [
     {
       title: "Arcade",
       bgImage: "/features/bg-arcade.jpg",
-      link: "/arcade",
+      modal: "arcade",
     },
     {
       title: "Tiendita",
       bgImage: "/features/bg-tiendita.jpg",
-      link: "/tiendita",
+      modal: "tiendita",
     },
     {
       title: "Línea del tiempo",
-      bgImage: "/features/bg-linea.jpg",
+      bgImage: "/features/bg-linea-tiempo.jpeg",
       link: "web/welcome",
     },
   ];
+
+  const closeModal = () => setActiveModal(null);
 
   return (
     <div className="feature-experiencias container">
       <div className="tv-container">
         <div className="tv-inner-container">
-          <h4>Nuestra experiencias</h4>
+          <h4>Nuestras experiencias</h4>
           <div className="card-container">
             {cards.map((card, index) => (
               <div
@@ -32,13 +37,40 @@ export default function Experiencias() {
                 className="card"
                 style={{ backgroundImage: `url(${card.bgImage})` }}
               >
-                <Link to={card.link}>{card.title}</Link>
+                {card.link ? (
+                  <Link to={card.link}>{card.title}</Link>
+                ) : (
+                  <button
+                    className="modal-btn"
+                    onClick={() => setActiveModal(card.modal)}
+                  >
+                    {card.title}
+                  </button>
+                )}
               </div>
             ))}
           </div>
         </div>
       </div>
-      {/* Polygon outline */}
+
+      {/* Modal */}
+      {activeModal && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={closeModal}>
+              ×
+            </button>
+            <h2>{activeModal === "arcade" ? "Arcade" : "Tiendita"}</h2>
+            <p>
+              {activeModal === "arcade"
+                ? "Bienvenido a nuestra experiencia Arcade, donde la diversión se encuentra con la ciencia. ¡Explora, juega y aprende! ¡Visítanos próximamente en el bloque 38 de la Universidad EAFIT!"
+                : "La Tiendita es un espacio interactivo para descubrir productos inspirados en la biodiversidad colombiana. ¡Conócela! ¡Visítanos próximamente en el bloque 38 de la Universidad EAFIT!"}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* SVG decorativos */}
       <svg
         width="483"
         height="448"
@@ -53,7 +85,7 @@ export default function Experiencias() {
           strokeWidth="3"
         />
       </svg>
-      {/* Polygon filled*/}
+
       <svg
         width="483"
         height="448"

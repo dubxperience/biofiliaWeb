@@ -4,52 +4,17 @@ import {
   useDraggable,
   useDroppable,
   closestCenter,
+  PointerSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
 } from "@dnd-kit/core";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./MapGame.css";
-import mapa from "../../../assets/dragGame/mapa.jpg";
-import cacao from "../../../assets/dragGame/dragObject.png";
+import mapa from "../../../assets/dragGame/2.jpg";
 import cacao1 from "../../../assets/dragGame/dragObject01.png";
-import { div } from "motion/react-client";
-
-// Lista de preguntas
-const QUESTIONS = [
-  {
-    pregunta: "¿En qué continente nació el cacao?",
-    respuestaCorrecta: "america",
-    mensajeExito:
-      "¡Muy bien! América es la cuna del cacao, donde comenzó su historia hace miles de años, en medio de la selva.",
-    mensajeError: "Ups, intenta de nuevo.",
-  },
-  {
-    pregunta: "¿A qué lugar viajó el cacao?",
-    respuestaCorrecta: "europa",
-    mensajeExito:
-      "¡Exacto! En el siglo XVI, el cacao cruzó el océano hasta Europa, donde cambió su sabor y su historia.",
-    mensajeError: "¡Oh no! Vuelve a intentarlo.",
-  },
-  {
-    pregunta: "Dónde se cultivo principalmente el cacao: Criollo",
-    respuestaCorrecta: "america",
-    mensajeExito:
-      "¡Bien hecho! El criollo es típico de América. Tiene un sabor delicado y es muy valorado por expertos.",
-    mensajeError: "Ups, esa no es la respuesta. Intenta otra vez.",
-  },
-  {
-    pregunta: "Dónde se cultivo principalmente el cacao: Forastero",
-    respuestaCorrecta: "africa",
-    mensajeExito:
-      "¡¡Correcto! África cultiva principalmente cacao forastero, resistente y el más producido en el mundo.",
-    mensajeError: "No es ahí. Prueba de nuevo.",
-  },
-  {
-    pregunta: "Dónde se cultivo principalmente el cacao: Trinitario",
-    respuestaCorrecta: "asia",
-    mensajeExito:
-      "¡Diste en el punto! El trinitario, mezcla de criollo y forastero, se cultiva sobre todo en Asia.",
-    mensajeError: "Casi, pero no. Sigue intentando.",
-  },
-];
+import QUESTIONS from "../../../data/game2.json";
 
 const CONTINENTES = ["america", "africa", "asia", "europa", "oceania"];
 
@@ -71,6 +36,7 @@ function DraggableItem({ id }) {
     transform: transform
       ? `translate(${transform.x}px, ${transform.y}px)`
       : undefined,
+    touchAction: "none",
   };
 
   return (
@@ -87,11 +53,14 @@ function DraggableItem({ id }) {
 }
 
 export default function MapGame() {
+  const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [placed, setPlaced] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
 
   const currentQuestion = QUESTIONS[currentQuestionIndex];
+
+  const sensors = useSensors(useSensor(PointerSensor), useSensor(TouchSensor));
 
   const handleDragEnd = (event) => {
     const { over } = event;
@@ -120,11 +89,20 @@ export default function MapGame() {
           setCurrentQuestionIndex(nextIndex);
           setPlaced(false);
         } else {
-          Swal.fire(
-            "¡Completado!",
-            "Has respondido correctamente todas las preguntas",
-            "success"
-          );
+          Swal.fire({
+            title: "Felicidades",
+            text: "Has completado todo el recorrido digital de biofilia es momento de volver al inicio",
+            showConfirmButton: false,
+            background: "#f8d693",
+            color: "#020b06",
+            backdrop: `rgba(0, 0, 0, 0.7)`,
+            customClass: {
+              popup: "swal-popup-final-custom",
+            },
+            didClose: () => {
+              navigate("/");
+            },
+          });
         }
       });
       setPlaced(true);
@@ -153,7 +131,7 @@ export default function MapGame() {
       setShowOverlay(true);
       const timer = setTimeout(() => {
         setShowOverlay(false);
-      }, 3000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -186,7 +164,11 @@ export default function MapGame() {
         </div>
       )}
 
-      <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+      <DndContext
+        sensors={sensors}
+        collisionDetection={closestCenter}
+        onDragEnd={handleDragEnd}
+      >
         <div className="map-wrapper">
           <img src={mapa} alt="mapa" className="mapa" />
 

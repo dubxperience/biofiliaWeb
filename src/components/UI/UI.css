@@ -1,0 +1,39 @@
+.btn-component {
+  position: relative;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--color-black-700);
+  border-radius: 0.5rem;
+  box-shadow: 4px 6px 0px var(--color-black-700);
+  font-size: 1.3rem;
+  font-weight: 800;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+}
+.btn-component:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0 var(--color-black-700);
+}
+.btn-component:active,
+.house-btn:active {
+  filter: saturate(0.75);
+}
+.house-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: 1.5rem;
+  border: 2px solid var(--color-black-700);
+  border-radius: 50%;
+  box-shadow: 2px 4px 0px var(--color-black-700);
+  color: var(--color-black-700);
+  background: var(--color-pink-300);
+  cursor: pointer;
+  z-index: 100;
+}
+.house-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 2px 0 var(--color-black-700);
+}

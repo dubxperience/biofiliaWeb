@@ -4,6 +4,7 @@ import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
 import PlayOne from "./PlayGameOne/PlayOne";
 // Importamos las plantillas de los datos
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoB from "../../../../components/Templates/DatoB/DatoB";
 import DatoC from "../../../../components/Templates/DatoC/DatoC";
 import mayasImg from "../../../../assets/fase3/mayas.png";
@@ -35,13 +36,11 @@ export default function Fase3() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase3">
-            <div className="fase-title">
-              <h3>
-                El cacao fue ritual, <br /> tributo y poder.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="El cacao fue ritual,"
+            text2="tributo y poder."
+            imgBg="/covers/fase-3-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoC

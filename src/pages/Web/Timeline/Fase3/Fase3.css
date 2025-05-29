@@ -11,36 +11,3 @@
   height: 100%;
   text-align: center;
 }
-.fases {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-.fase3 {
-  background: url("/covers/fase-3-cover.png") center/cover no-repeat;
-}
-.fase-title {
-  padding: 2rem 2.5rem;
-  border: 2px solid var(--color-black-700);
-  border-radius: 1rem;
-  background: var(--color-beige-100);
-}
-.fase-title h3 {
-  color: var(--color-black-700);
-}
-.start-btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  background-color: var(--color-green-500);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-.start-btn:hover {
-  background-color: var(--color-green-600);
-}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
 // Importamos las plantillas de los datos
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoA from "../../../../components/Templates/DatoA/DatoA";
 import DatoB from "../../../../components/Templates/DatoB/DatoB";
 import DatoC from "../../../../components/Templates/DatoC/DatoC";
@@ -35,14 +36,11 @@ export default function Fase2() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase2">
-            <div className="fase-title">
-              <h3>
-                Todo empezó con una semilla <br /> en la profundidad de la
-                selva.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="Todo empezó con una semilla"
+            text2="en la profundidad de la selva."
+            imgBg="/covers/fase-2-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoA

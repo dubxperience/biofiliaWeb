@@ -22,9 +22,9 @@ export default function WelcomeScreen() {
             </button>
           </div>
         </div>
-        <img src="/onboarding/w1.png" className="img1" />
-        <img src="/onboarding/w3.png" className="img2" />
-        <img src="/onboarding/w2.png" className="img3" />
+        <img src="/instructions/w1.png" className="img1" />
+        <img src="/instructions/w3.png" className="img2" />
+        <img src="/instructions/w2.png" className="img3" />
       </div>
     </div>
   );

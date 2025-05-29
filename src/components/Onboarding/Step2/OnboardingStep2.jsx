@@ -2,7 +2,7 @@ import "../Onboarding.css";
 
 export default function OnboardingStep2() {
   return (
-    <div className="onboarding-step step-2">
+    <div className="onboarding-step onb-2">
       <div>
         <h2>Navega de forma sencilla</h2>
         <p>

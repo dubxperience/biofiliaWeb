@@ -1,0 +1,32 @@
+[
+  {
+    "pregunta": "¿En qué continente nació el cacao?",
+    "respuestaCorrecta": "america",
+    "mensajeExito": "¡Muy bien! América es la cuna del cacao, donde comenzó su historia hace miles de años, en medio de la selva.",
+    "mensajeError": "Ups, intenta de nuevo."
+  },
+  {
+    "pregunta": "¿A qué lugar viajó el cacao?",
+    "respuestaCorrecta": "europa",
+    "mensajeExito": "¡Exacto! En el siglo XVI, el cacao cruzó el océano hasta Europa, donde cambió su sabor y su historia.",
+    "mensajeError": "¡Oh no! Vuelve a intentarlo."
+  },
+  {
+    "pregunta": "Dónde se cultivo principalmente el cacao: Criollo",
+    "respuestaCorrecta": "america",
+    "mensajeExito": "¡Bien hecho! El criollo es típico de América. Tiene un sabor delicado y es muy valorado por expertos.",
+    "mensajeError": "Ups, esa no es la respuesta. Intenta otra vez."
+  },
+  {
+    "pregunta": "Dónde se cultivo principalmente el cacao: Forastero",
+    "respuestaCorrecta": "africa",
+    "mensajeExito": "¡¡Correcto! África cultiva principalmente cacao forastero, resistente y el más producido en el mundo.",
+    "mensajeError": "No es ahí. Prueba de nuevo."
+  },
+  {
+    "pregunta": "Dónde se cultivo principalmente el cacao: Trinitario",
+    "respuestaCorrecta": "asia",
+    "mensajeExito": "¡Diste en el punto! El trinitario, mezcla de criollo y forastero, se cultiva sobre todo en Asia.",
+    "mensajeError": "Casi, pero no. Sigue intentando."
+  }
+]

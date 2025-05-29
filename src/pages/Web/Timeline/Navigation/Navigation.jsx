@@ -1,5 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import "./Navigation.css";
 
 const fases = [
@@ -48,26 +50,7 @@ export default function FasesNavigation() {
 
         {/* FAB principal */}
         <button className="fab" onClick={() => setIsOpen(!isOpen)}>
-          <svg
-            width="30"
-            height="17"
-            viewBox="0 0 30 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 15L28 2"
-              stroke="#020B06"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-            <path
-              d="M15 15L2 2"
-              stroke="#020B06"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-          </svg>
+          <FontAwesomeIcon icon={faCaretDown} />
         </button>
 
         {/* Acciones */}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
 // Importamos las plantillas de los datos
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoA from "../../../../components/Templates/DatoA/DatoA";
 import DatoC from "../../../../components/Templates/DatoC/DatoC";
 import criolloImg from "../../../../assets/fase6/criollo.png";
@@ -36,13 +37,11 @@ export default function Fase6() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase6">
-            <div className="fase-title">
-              <h3>
-                Hay un cacao para cada gusto, <br />y cada región.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="Hay un cacao para cada gusto,"
+            text2="y cada región."
+            imgBg="/covers/fase-6-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoA
@@ -55,7 +54,7 @@ export default function Fase6() {
         {step === 2 && (
           <DatoC
             title="Tipos de cacao"
-            text="En 1777, en Barcelona, se inició la producción mecánica de chocolate, marcando el paso de la elaboración artesanal a la industrial."
+            text="Cacao Criollo: Claro y delicado (predomina en América). Cacao Forastero: Oscuro y resistente (Predomina en África). Cacao Trinitario: Una mezcla de los dos (Predomina en Asia)."
             image={forasteroImg}
             fillColor="var(--color-pink-300)"
           />

@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--color-green-300);
+  touch-action: none;
 }
 .game-container .game-question {
   position: absolute;
@@ -68,7 +70,7 @@
   z-index: 8;
 }
 .draggable {
-  width: 100px;
+  width: 6.25rem;
   position: absolute;
   top: 50%;
   right: 0;
@@ -78,8 +80,8 @@
 }
 .dropzone {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   border: 2px solid transparent;
   border-radius: 50%;
   transition: all 0.2s ease;
@@ -89,11 +91,10 @@
   border: 2px solid var(--color-pink-300);
   background: rgba(255, 243, 219, 0.736);
 }
-
 /* Posiciones dropzone en el mapa */
 .dropzone.america {
   top: 70%;
-  left: 27%;
+  left: 30%;
 }
 .dropzone.africa {
   top: 55%;
@@ -101,15 +102,15 @@
 }
 .dropzone.asia {
   top: 30%;
-  left: 70%;
+  left: 65%;
 }
 .dropzone.europa {
   top: 30%;
-  left: 55%;
+  left: 50%;
 }
 .dropzone.oceania {
   top: 75%;
-  left: 80%;
+  left: 75%;
 }
 /* Animacion overlay */
 .mapgame-overlay {
@@ -128,9 +129,45 @@
   text-align: center;
   padding: 1rem;
 }
-
 .mapgame-overlay-content {
   background: var(--color-green-400);
   padding: 2rem;
   border-radius: 12px;
+}
+@media (max-width: 920px) {
+  .game-question h3 {
+    padding: 1rem;
+    border: 2px solid var(--color-black-700);
+    border-radius: 1rem;
+    font-size: 1rem;
+    background: var(--color-beige-100);
+  }
+  .draggable-container {
+    width: 100px;
+    height: 140px;
+  }
+  .draggable {
+    top: 40%;
+    right: 3%;
+    transform: scale(0.9);
+  }
+  .dropzone {
+    width: 5rem;
+    height: 5rem;
+  }
+  .mapa {
+    transform: scale(1.2);
+  }
+  .dropzone.africa {
+    left: 45%;
+  }
+  .dropzone.asia {
+    left: 65%;
+  }
+  .dropzone.europa {
+    left: 50%;
+  }
+  .dropzone.oceania {
+    left: 70%;
+  }
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoA from "../../../../components/Templates/DatoA/DatoA";
 import domesticacionImg from "../../../../assets/fase1/domesticacion.png";
 import DatoB from "../../../../components/Templates/DatoB/DatoB";
@@ -32,13 +33,11 @@ export default function Fase1() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase1">
-            <div className="fase-title">
-              <h3>
-                Las plantas que conoces <br /> no siempre fueron así.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="Las plantas que conoces"
+            text2="no siempre fueron así."
+            imgBg="/covers/fase-1-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoA

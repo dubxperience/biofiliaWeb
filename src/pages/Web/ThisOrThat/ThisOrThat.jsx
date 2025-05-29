@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ThisOrThat.css";
 import questions from "../../../data/game1.json";
 import Swal from "sweetalert2";
 
 export default function ThisOrThat() {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState(Array(questions.length).fill(""));
   const [imageSrc, setImageSrc] = useState("/cacao/cacao-frente.png");
@@ -74,14 +76,32 @@ export default function ThisOrThat() {
       },
     });
 
-    if (currentStep === questions.length - 1) {
-      alert("Terminaste el juego");
-    }
+    const correctCount = answers.filter((answer) => answer?.isCorrect).length;
+
+    await Swal.fire({
+      title: correctCount >= 6 ? "¡Felicidades!" : "¡Buen intento!",
+      text:
+        correctCount >= 6
+          ? `Has acertado ${correctCount}/8. ¡Muy bien! Continúa explorando las fases`
+          : `Has acertado ${correctCount}/8. Sigue explorando las fases.`,
+      icon: correctCount >= 6 ? "success" : "info",
+      showConfirmButton: false,
+      background: "#f8d693",
+      color: "#020b06",
+      backdrop: `rgba(0, 0, 0, 0.7)`,
+      customClass: {
+        popup: "swal-popup-final-custom",
+      },
+      didClose: () => {
+        navigate("/web/fases/fase4");
+      },
+    });
   };
 
   return (
     <div className="quiz-container">
       <div className="quiz-content">
+        <h3>{currentStep + 1}/8</h3>
         {/* Barra de progreso */}
         <div className="progress-steps">
           {questions.map((_, index) => (

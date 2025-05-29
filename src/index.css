@@ -9,7 +9,9 @@
   --color-yellow-500: #fde509;
   --color-pink-300: #ff99bb;
   --color-pink-100: #fcd6e3;
+  --color-green-100: #00c69b;
   --color-green-200: #00c64c;
+  --color-green-300: #36846a;
   --color-green-400: #018e6f;
   --color-green-600: #236b39;
 
@@ -79,6 +81,11 @@ a {
   width: 100%;
   height: 96px;
   background: var(--color-mustard-700);
+}
+.fa-house path,
+.fa-arrow-right path,
+.fa-arrow-left path {
+  color: var(--color-black-700);
 }
 @media (max-width: 920px) {
   .banner-top {

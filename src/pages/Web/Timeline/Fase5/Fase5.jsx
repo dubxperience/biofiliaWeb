@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
 // Importamos las plantillas de los datos
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoB from "../../../../components/Templates/DatoB/DatoB";
 import DatoC from "../../../../components/Templates/DatoC/DatoC";
 import chocoModernoImg from "../../../../assets/fase5/chocolatemoderno.png";
@@ -34,13 +35,11 @@ export default function Fase5() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase5">
-            <div className="fase-title">
-              <h3>
-                Del taller artesanala <br /> a la fábrica.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="Del taller artesanala"
+            text2="a la fábrica."
+            imgBg="/covers/fase-5-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoC

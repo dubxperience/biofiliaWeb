@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import FasesNavigation from "../Navigation/Navigation";
 import StepNavigator from "../../../../components/StepsNavigator/StepsNavigator";
 // Importamos las plantillas de los datos
+import Covers from "../../../../components/Templates/Covers/Cover";
 import DatoB from "../../../../components/Templates/DatoB/DatoB";
 import DatoA from "../../../../components/Templates/DatoA/DatoA";
 import americaImg from "../../../../assets/fase4/deamerica.png";
@@ -35,13 +36,11 @@ export default function Fase4() {
       <div className="fase-intro">
         <div className="banner-top"></div>
         {step === 0 && (
-          <div className="fases fase4">
-            <div className="fase-title">
-              <h3>
-                El cacao cambió de <br /> continente y de sabor.
-              </h3>
-            </div>
-          </div>
+          <Covers
+            text1="El cacao cambió de"
+            text2="continente y de sabor."
+            imgBg="/covers/fase-4-cover.png"
+          />
         )}
         {step === 1 && (
           <DatoB
@@ -54,9 +53,7 @@ export default function Fase4() {
         {step === 2 && (
           <DatoA
             title="Para tener claro"
-            text="Hace más de 5.000 años, el cacao comenzó su historia en la Alta
-                          Amazonía, en una región, entre lo que hoy es Colombia, Ecuador y
-                          Brasil."
+            text="El cacao es el fruto del árbol Theobroma cacao. El chocolate es el producto que obtiene al procesar sus semillas y mezclarlas con azúcar, leche y saborizantes"
             image={americaImg}
             fillColor="var(--color-green-400)"
           />

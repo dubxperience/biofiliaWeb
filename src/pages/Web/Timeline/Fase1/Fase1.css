@@ -33,17 +33,3 @@
   color: var(--color-black-700);
   font-size: clamp(1.7rem, 2rem, 2.5rem);
 }
-.start-btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  background-color: var(--color-green-500);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-
-.start-btn:hover {
-  background-color: var(--color-green-600);
-}

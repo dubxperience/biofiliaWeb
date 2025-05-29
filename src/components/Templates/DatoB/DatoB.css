@@ -17,7 +17,7 @@
   z-index: 3;
 }
 .datob-header h2 {
-  font-size: clamp(1.5rem, 10vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 800;
   color: var(--color-beige-100);
 }
